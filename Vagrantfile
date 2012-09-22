@@ -14,12 +14,13 @@ end
 
 Vagrant::Config.run do |config|
 
-  config.vm.box = "lucid32"
+  config.vm.box = "wheezy-b2-i386"
 
  
-  config.vm.customize ["modifyvm", :id, "--memory", "2048"]
+  config.vm.customize ["modifyvm", :id, "--memory", "3072"]
   config.vm.network :hostonly, "192.168.33.12"
   config.vm.forward_port 9292, 9292
+  config.vm.forward_port 5601, 5601
 
   config.vm.boot_mode = :gui
  
@@ -28,7 +29,7 @@ Vagrant::Config.run do |config|
  
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = "."
-    puppet.module_path    = "puppet-modules"
+    puppet.module_path    = "modules"
     puppet.manifest_file  = is_port_open?("localhost",3128) ?  "node-proxy.pp" : "node.pp"
   end
 end

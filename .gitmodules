@@ -4,6 +4,3 @@
 [submodule "modules/kibana"]
 	path = modules/kibana
 	url = git@github.com:k9ert/puppet-kibana.git
-[submodule "modules/rvm"]
-	path = modules/rvm
-	url = https://github.com/blt04/puppet-rvm.git

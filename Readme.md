@@ -12,10 +12,9 @@ getting started:
 * git submodule init
 * git submodule update
 * vagrant up
+* Unfortunately, because redis is not coming up for some reason, you need another "vagrant provision" right now
 * http://localhost:5601/
 * wait another couple of seconds to get some data collected
+* Compare with the logstash-gui http://localhost:9292
 
-
-As a small finger exercise, i want to say "thank you" to these people:
-TBD
 
